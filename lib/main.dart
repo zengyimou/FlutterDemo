@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/res/colors.dart';
+import 'package:flutterdemo/route/page_routes.dart';
 import 'package:flutterdemo/utils/Adapt.dart';
 import 'package:flutterdemo/utils/log_utils.dart';
 import 'package:logger/logger.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page UU'),
+      routes: const {
+
+      },
     );
   }
 }
