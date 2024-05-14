@@ -9,10 +9,25 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Map<String, dynamic> map = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    int userId = map["userId"];
+    String userName = map["userName"];
 
+    //SafeArea不与顶部状态栏重合
+    return SafeArea(
+        child: Column(
+          children: [
+            Text("userId: $userId userName $userName")
+          ],
+        ),
     );
 
   }
