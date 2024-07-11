@@ -1,4 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutterdemo/res/colors.dart';
+
+import '../mixin/dialog/dialog_mixin.dart';
+import '../utils/Adapt.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,11 +27,21 @@ class _LoginPageState extends State<LoginPage> {
 
     //SafeArea不与顶部状态栏重合
     return SafeArea(
-        child: Column(
-          children: [
-            Text("userId: $userId userName $userName")
-          ],
-        ),
+        child: Container(
+          color: ColorStyle.color_white,
+          child:  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "userId: $userId userName $userName",
+                style: TextStyle(
+                    color: ColorStyle.color_black,
+                    fontSize: Adapt.setRpx(28),
+                ),
+              )
+            ],
+          ),
+        )
     );
 
   }

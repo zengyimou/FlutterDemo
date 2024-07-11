@@ -26,13 +26,14 @@ class _SplashPageState extends State<SplashPage> {
         'userId': 123,
         'userName': 'John Doe',
       };
-      Navigator.pushNamed(context, RouteName.loginPage, arguments: arguments);
+      Navigator.pushReplacementNamed(context, RouteName.loginPage, arguments: arguments);
     });
   }
 
   @override
   Widget build(BuildContext context) {
       return Container(
+        color: ColorStyle.color_white,
         padding: EdgeInsets.all(Adapt.setRpx(10)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +43,7 @@ class _SplashPageState extends State<SplashPage> {
                   width: Adapt.setRpx(200),
                   height: Adapt.setRpx(200),
                   child: Container(
-                    color: ColorStyle.color_3A3A3B_90,
+                    color: ColorStyle.color_1A2F51,
                   )
                 )
             ],
